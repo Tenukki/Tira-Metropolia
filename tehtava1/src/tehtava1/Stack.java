@@ -38,10 +38,19 @@ public class Stack {
     }
     
     public void printItems(){
+        ListItem eka = mTop;
+        ListItem vuorossa = mTop;
         for (int i = 0; i < mSize; i++) {
+            if(i == 0){
+                System.out.println(eka.getmData());
+                vuorossa = eka.getmNext();
+                
+            }else{
+                System.out.println(vuorossa.getmData());
+                vuorossa = vuorossa.getmNext();
+            }
             
         }
-        
     }
     
     public int getSize(){
